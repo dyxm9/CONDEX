@@ -34,13 +34,13 @@ h1 {
 /* Grid de Sintomas */
 .sintomas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Distribui os itens em colunas flexíveis */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Distribui os itens em colunas flexíveis */
     gap: 10px;
 }
 
-/* Estilo dos Grupos de Sintomas */
-input[type="radio"] {
-    display: none; /* Esconde os botões de rádio */
+/* Estilo dos Checkboxes e Labels */
+input[type="checkbox"] {
+    display: none; /* Esconde os checkboxes */
 }
 
 label {
@@ -58,7 +58,7 @@ label:hover {
     transform: scale(1.05);
 }
 
-input[type="radio"]:checked + label {
+input[type="checkbox"]:checked + label {
     background-color: #007BFF;
     transform: scale(1.1);
 }
@@ -87,7 +87,7 @@ button:hover {
 #result {
     margin-top: 30px;
     font-weight: bold;
-    color: #ffffff; /* Cor branca para o resultado */
+    color: #000000; /* Cor preta para o resultado */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
