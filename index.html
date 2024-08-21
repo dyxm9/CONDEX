@@ -7,36 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Diagnóstico de Sintomas</h1>
-    <p>Selecione os sintomas abaixo e receba um diagnóstico:</p>
-    <div class="symptoms-container">
-        <div class="symptom-group">
-            <input type="checkbox" id="febre" value="febre">
-            <label for="febre">Febre</label>
+    <div class="container">
+        <h1>Diagnóstico de Sintomas</h1>
+        <p>Selecione os sintomas abaixo e receba um diagnóstico:</p>
+        <div class="symptoms-container">
+            <div class="symptom-group">
+                <input type="checkbox" id="febre" value="febre">
+                <label for="febre">Febre</label>
+            </div>
+            <div class="symptom-group">
+                <input type="checkbox" id="tosse" value="tosse">
+                <label for="tosse">Tosse</label>
+            </div>
+            <div class="symptom-group">
+                <input type="checkbox" id="dor-cabeca" value="dor de cabeça">
+                <label for="dor-cabeca">Dor de Cabeça</label>
+            </div>
+            <div class="symptom-group">
+                <input type="checkbox" id="nausea" value="náusea">
+                <label for="nausea">Náusea</label>
+            </div>
+            <div class="symptom-group">
+                <input type="checkbox" id="cansaco" value="cansaço">
+                <label for="cansaco">Cansaço</label>
+            </div>
+            <div class="symptom-group">
+                <input type="checkbox" id="dificuldade-respiratoria" value="dificuldade respiratória">
+                <label for="dificuldade-respiratoria">Dificuldade Respiratória</label>
+            </div>
         </div>
-        <div class="symptom-group">
-            <input type="checkbox" id="tosse" value="tosse">
-            <label for="tosse">Tosse</label>
-        </div>
-        <div class="symptom-group">
-            <input type="checkbox" id="dor-cabeca" value="dor de cabeça">
-            <label for="dor-cabeca">Dor de Cabeça</label>
-        </div>
-        <div class="symptom-group">
-            <input type="checkbox" id="nausea" value="náusea">
-            <label for="nausea">Náusea</label>
-        </div>
-        <div class="symptom-group">
-            <input type="checkbox" id="cansaco" value="cansaço">
-            <label for="cansaco">Cansaço</label>
-        </div>
-        <div class="symptom-group">
-            <input type="checkbox" id="dificuldade-respiratoria" value="dificuldade respiratória">
-            <label for="dificuldade-respiratoria">Dificuldade Respiratória</label>
-        </div>
+        <button onclick="getDiagnosis()">Obter Diagnóstico</button>
+        <p id="result"></p>
     </div>
-    <button onclick="getDiagnosis()">Obter Diagnóstico</button>
-    <p id="result"></p>
     <script src="script.js"></script>
 </body>
 </html>
