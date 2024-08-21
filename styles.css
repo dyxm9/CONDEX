@@ -20,6 +20,12 @@ h1 {
 
 .symptom-group {
     margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.symptom-group input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 label {
@@ -46,4 +52,18 @@ button:hover {
     font-size: 18px;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@media (max-width: 600px) {
+    .symptom-group {
+        flex: 1 0 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 400px) {
+    .symptom-group {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
 }
