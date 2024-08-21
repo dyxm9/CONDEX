@@ -83,4 +83,12 @@ function getDiagnosis() {
 
     // Altera a cor do texto com base no diagnóstico
     if (diagnosis.includes("não possível") || diagnosis.includes("Por favor")) {
-        resultElement.style.color = "
+        resultElement.style.color = "red"; // Resultado negativo em vermelho
+    } else {
+        resultElement.style.color = "green"; // Resultado positivo em verde
+    }
+
+    // Torna o resultado visível
+    resultElement.style.opacity = 1;
+    resultElement.style.transform = 'translateY(0)';
+}
