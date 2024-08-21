@@ -23,10 +23,12 @@ function getDiagnosis() {
     const symptomSet = new Set(symptoms);
 
     // Verifica combinações de sintomas e atribui um diagnóstico correspondente
-    if (symptomSet.has('febre') && symptomSet.has('tosse') && symptomSet.has('dor de cabeça') && symptomSet.has('náusea')) {
-        diagnosis = "Pode ser uma infecção viral grave. Procure um médico imediatamente.";
-    } else if (symptomSet.has('febre') && symptomSet.has('tosse') && symptomSet.has('dor de cabeça')) {
-        diagnosis = "Pode ser uma infecção respiratória grave, como gripe. Procure um médico.";
+    if (symptomSet.has('febre') && symptomSet.has('tosse') && symptomSet.has('dor de cabeça') && symptomSet.has('náusea') && symptomSet.has('cansaço') && symptomSet.has('dificuldade respiratória')) {
+        diagnosis = "Pode ser uma condição grave que requer atenção médica imediata.";
+    } else if (symptomSet.has('febre') && symptomSet.has('tosse') && symptomSet.has('dor de cabeça') && symptomSet.has('náusea') && symptomSet.has('cansaço')) {
+        diagnosis = "Pode ser uma infecção viral como a gripe. Procure um médico.";
+    } else if (symptomSet.has('febre') && symptomSet.has('tosse') && symptomSet.has('dor de cabeça') && symptomSet.has('náusea')) {
+        diagnosis = "Pode ser uma infecção respiratória. Consulte um médico.";
     } else if (symptomSet.has('febre') && symptomSet.has('tosse') && symptomSet.has('náusea')) {
         diagnosis = "Pode ser uma gripe ou infecção viral. Consulte um médico.";
     } else if (symptomSet.has('febre') && symptomSet.has('dor de cabeça') && symptomSet.has('náusea')) {
@@ -61,12 +63,18 @@ function getDiagnosis() {
         diagnosis = "Pode ser um problema gastrointestinal associado ao cansaço. Mantenha-se hidratado e consulte um médico.";
     } else if (symptomSet.has('dor de cabeça') && symptomSet.has('cansaço')) {
         diagnosis = "Pode ser uma condição de estresse ou fadiga. Considere consultar um médico.";
-    } else if (symptomSet.has('dor de cabeça')) {
-        diagnosis = "Pode ser uma dor de cabeça comum, estresse ou tensão. Considere um médico se persistir.";
-    } else if (symptomSet.has('náusea')) {
-        diagnosis = "Pode ser uma indigestão ou problema gastrointestinal leve.";
-    } else if (symptomSet.has('cansaço')) {
-        diagnosis = "Pode ser um sinal de fadiga ou estresse. Consulte um médico se necessário.";
+    } else if (symptomSet.has('febre') && symptomSet.has('dificuldade respiratória')) {
+        diagnosis = "Pode ser uma infecção respiratória grave, como COVID-19. Procure um médico imediatamente.";
+    } else if (symptomSet.has('tosse') && symptomSet.has('dificuldade respiratória')) {
+        diagnosis = "Pode ser uma condição respiratória grave. Consulte um médico.";
+    } else if (symptomSet.has('dor de cabeça') && symptomSet.has('dificuldade respiratória')) {
+        diagnosis = "Pode ser uma condição respiratória associada à dor de cabeça. Procure orientação médica.";
+    } else if (symptomSet.has('náusea') && symptomSet.has('dificuldade respiratória')) {
+        diagnosis = "Pode ser um problema gastrointestinal com dificuldade respiratória. Consulte um médico.";
+    } else if (symptomSet.has('cansaço') && symptomSet.has('dificuldade respiratória')) {
+        diagnosis = "Pode ser uma condição respiratória com fadiga. Considere consultar um médico.";
+    } else if (symptomSet.has('dificuldade respiratória')) {
+        diagnosis = "Pode ser um sinal de um problema respiratório. Consulte um médico imediatamente.";
     }
 
     // Atualiza o texto do resultado e faz com que ele seja visível
@@ -75,12 +83,4 @@ function getDiagnosis() {
 
     // Altera a cor do texto com base no diagnóstico
     if (diagnosis.includes("não possível") || diagnosis.includes("Por favor")) {
-        resultElement.style.color = "red"; // Resultado negativo em vermelho
-    } else {
-        resultElement.style.color = "green"; // Resultado positivo em verde
-    }
-
-    // Torna o resultado visível
-    resultElement.style.opacity = 1;
-    resultElement.style.transform = 'translateY(0)';
-}
+        resultElement.style.color = "
