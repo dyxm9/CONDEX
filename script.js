@@ -9,6 +9,13 @@ function getDiagnosis() {
         symptoms.push(checkbox.value);
     });
 
+    // Verifica se há sintomas selecionados
+    if (symptoms.length === 0) {
+        document.getElementById('result').innerText = "Por favor, selecione ao menos um sintoma.";
+        document.getElementById('result').style.color = "red"; // Resultado em vermelho
+        return;
+    }
+
     // Inicializa a variável de diagnóstico com uma mensagem padrão
     let diagnosis = "Não foi possível identificar os sintomas. Por favor, consulte um médico.";
 
@@ -39,6 +46,15 @@ function getDiagnosis() {
     // Atualiza o texto do resultado e faz com que ele seja visível
     const resultElement = document.getElementById('result');
     resultElement.innerText = diagnosis;
+
+    // Altera a cor do texto com base no diagnóstico
+    if (diagnosis.includes("não possível") || diagnosis.includes("Por favor")) {
+        resultElement.style.color = "red"; // Resultado negativo em vermelho
+    } else {
+        resultElement.style.color = "green"; // Resultado positivo em verde
+    }
+
+    // Torna o resultado visível
     resultElement.style.opacity = 1;
     resultElement.style.transform = 'translateY(0)';
 }
