@@ -7,90 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Diagnóstico de Sintomas</h1>
-    <p>Selecione o grupo de sintomas que você está experimentando:</p>
-    <form>
-        <label>
-            <input type="radio" name="symptomGroup" value="gripeCOVID"> Febre e Tosse
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="enxaqueca"> Dor de cabeça e Náusea
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="dengue"> Febre, Dor atrás dos olhos, Dor muscular e Manchas vermelhas na pele
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="gripe"> Febre, Dor de garganta e Cansaço
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="virose"> Febre, Dor no corpo, Mal-estar e Diarreia
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="problemaCardiaco"> Dor no peito e Falta de ar
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="sinusite"> Dor no rosto, Congestão nasal e Dor de cabeça
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="alergia"> Espirros, Coceira nos olhos e Coriza
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="asma"> Falta de ar, Chiado no peito e Tosse
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="gastrite"> Dor no estômago, Queimação e Náusea
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="infarto"> Dor intensa no peito, Suor frio e Náusea
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="hipertensao"> Dor de cabeça, Tontura e Visão turva
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="diabetes"> Sede excessiva, Fome excessiva e Perda de peso
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="hepatite"> Pele amarelada, Dor abdominal e Fadiga
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="apendicite"> Dor intensa no abdômen inferior direito, Febre e Náusea
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="calculorenal"> Dor intensa nas costas, Sangue na urina e Vômito
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="pancreatite"> Dor abdominal severa, Febre e Vômito
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="meningite"> Febre alta, Dor de cabeça intensa e Rigidez na nuca
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="anemia"> Cansaço, Palidez e Falta de ar
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="depressao"> Tristeza persistente, Perda de interesse em atividades e Alterações no apetite
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="ansiedade"> Preocupação excessiva, Insônia e Tensão muscular
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="hipotiroidismo"> Cansaço, Ganho de peso e Intolerância ao frio
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="hipertiroidismo"> Perda de peso, Batimentos cardíacos acelerados e Nervosismo
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="dermatite"> Coceira, Vermelhidão na pele e Descamação
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="pneumonia"> Tosse com catarro, Dor no peito e Febre alta
-        </label><br>
-        <label>
-            <input type="radio" name="symptomGroup" value="colicaRenal"> Dor intensa no abdômen ou nas costas, Urina com sangue e Náusea
-        </label><br>
-    </form>
-    <button onclick="getDiagnosis()">Obter Diagnóstico</button>
-    <p id="result"></p>
+    <div class="container">
+        <h1>Diagnóstico de Sintomas</h1>
+        <p>Selecione seus sintomas abaixo:</p>
+        <div class="sintomas-grid">
+            <input type="radio" id="sintoma1" name="sintoma" value="febre">
+            <label for="sintoma1">Febre</label>
+            
+            <input type="radio" id="sintoma2" name="sintoma" value="tosse">
+            <label for="sintoma2">Tosse</label>
+
+            <input type="radio" id="sintoma3" name="sintoma" value="dor de cabeça">
+            <label for="sintoma3">Dor de Cabeça</label>
+
+            <input type="radio" id="sintoma4" name="sintoma" value="náusea">
+            <label for="sintoma4">Náusea</label>
+
+            <!-- Adicione mais sintomas aqui -->
+        </div>
+        <button onclick="getDiagnosis()">Obter Diagnóstico</button>
+        <p id="result"></p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
