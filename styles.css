@@ -1,111 +1,102 @@
-/* Estilos Globais */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #000080, #000000); /* Degradê azul para preto */
-    color: #FFFFFF; /* Cor padrão do texto */
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000066, #003366);
+    color: white;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+    height: 100vh;
+    flex-direction: column;
 }
 
-/* Container Principal */
 .container {
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro para destacar o conteúdo */
     padding: 20px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
     text-align: center;
-    backdrop-filter: blur(10px);
+    max-width: 600px;
+    width: 100%;
 }
 
-/* Estilo do Título */
 h1 {
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-top: 0;
 }
 
-/* Grid de Sintomas */
-.sintomas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Distribui os itens em colunas flexíveis */
-    gap: 10px;
+.symptoms-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
 }
 
-/* Estilo dos Checkboxes e Labels */
-input[type="checkbox"] {
-    display: none; /* Esconde os checkboxes */
+.symptom-group {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.symptom-group input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 label {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    text-align: center;
+    margin-left: 5px;
 }
 
-label:hover {
-    background-color: #555555;
-    transform: scale(1.05);
-}
-
-input[type="checkbox"]:checked + label {
-    background-color: #007BFF;
-    transform: scale(1.1);
-}
-
-/* Botão de Diagnóstico */
 button {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #007BFF;
-    color: #ffffff;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
     font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 button:hover {
     background-color: #0056b3;
-    transform: scale(1.05);
 }
 
-/* Resultado do Diagnóstico */
 #result {
-    margin-top: 30px;
+    margin-top: 20px;
     font-weight: bold;
-    color: #000000; /* Cor preta para o resultado */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     font-size: 18px;
+    color: black; /* Fonte preta para o resultado */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Ajustes para telas menores */
+#result.leve {
+    color: green;
+}
+
+#result.moderado {
+    color: orange;
+}
+
+#result.grave {
+    color: red;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white; /* Fonte branca para o texto de desenvolvimento */
+}
+
 @media (max-width: 600px) {
-    h1 {
-        font-size: 20px;
+    .symptom-group {
+        flex: 1 0 45%;
+        max-width: 45%;
     }
+}
 
-    label, button {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    #result {
-        font-size: 16px;
+@media (max-width: 400px) {
+    .symptom-group {
+        flex: 1 0 100%;
+        max-width: 100%;
     }
 }
