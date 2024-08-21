@@ -1,8 +1,8 @@
 /* Estilos Globais */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #000080, #000000); /* Degradê azul para preto */
-    color: #FFFFFF; /* Cor padrão do texto */
+    background: linear-gradient(to bottom, #0000ff, #000000); /* Degradê azul para preto */
+    color: #ffffff; /* Cor padrão do texto */
     margin: 0;
     padding: 0;
     display: flex;
@@ -36,6 +36,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Distribui os itens em colunas flexíveis */
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 /* Estilo dos Checkboxes e Labels */
