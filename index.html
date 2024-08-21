@@ -1,23 +1,37 @@
- html
-   <!DOCTYPE html>
-   <html lang="pt-BR">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Diagnóstico de Sintomas</title>
-       <link rel="stylesheet" href="styles.css">
-   </head>
-   <body>
-       <div class="container">
-           <h1>Diagnóstico de Sintomas</h1>
-           <p>Digite seus sintomas abaixo e receba um diagnóstico:</p>
-           <textarea id="symptoms" rows="5" placeholder="Descreva seus sintomas aqui..."></textarea><br>
-           <button onclick="getDiagnosis()">Obter Diagnóstico</button>
-           <p id="result"></p>
-       </div>
-       <footer>
-           <p>Desenvolvido por: Miguel, Ester, Lara, Yarah, Thomás</p>
-       </footer>
-       <script src="script.js"></script>
-   </body>
-   </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Sintomas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Diagnóstico de Sintomas</h1>
+    <p>Selecione o grupo de sintomas que você está experimentando:</p>
+    <form>
+        <label>
+            <input type="radio" name="symptomGroup" value="gripeCOVID"> Febre e Tosse
+        </label><br>
+        <label>
+            <input type="radio" name="symptomGroup" value="enxaqueca"> Dor de cabeça e Náusea
+        </label><br>
+        <label>
+            <input type="radio" name="symptomGroup" value="dengue"> Febre, Dor atrás dos olhos, Dor muscular e Manchas vermelhas na pele
+        </label><br>
+        <label>
+            <input type="radio" name="symptomGroup" value="gripe"> Febre, Dor de garganta e Cansaço
+        </label><br>
+        <label>
+            <input type="radio" name="symptomGroup" value="virose"> Febre, Dor no corpo, Mal-estar e Diarreia
+        </label><br>
+        <label>
+            <input type="radio" name="symptomGroup" value="problemaCardiaco"> Dor no peito e Falta de ar
+        </label><br>
+        <!-- Adicione mais grupos conforme necessário -->
+    </form>
+    <button onclick="getDiagnosis()">Obter Diagnóstico</button>
+    <p id="result"></p>
+    <script src="script.js"></script>
+</body>
+</html>
