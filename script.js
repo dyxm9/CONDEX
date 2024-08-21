@@ -1,15 +1,21 @@
 function getDiagnosis() {
+    // Cria um array para armazenar os sintomas selecionados
     const symptoms = [];
+    // Seleciona todos os checkboxes marcados
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
 
+    // Adiciona o valor de cada checkbox marcado ao array de sintomas
     checkboxes.forEach(checkbox => {
         symptoms.push(checkbox.value);
     });
 
+    // Inicializa a variável de diagnóstico com uma mensagem padrão
     let diagnosis = "Não foi possível identificar os sintomas. Por favor, consulte um médico.";
 
+    // Cria um conjunto para eliminar duplicatas
     const symptomSet = new Set(symptoms);
 
+    // Verifica combinações de sintomas e atribui um diagnóstico correspondente
     if (symptomSet.has('febre') && symptomSet.has('tosse') && symptomSet.has('dor de cabeça') && symptomSet.has('náusea')) {
         diagnosis = "Pode ser uma infecção viral grave. Procure um médico imediatamente.";
     } else if (symptomSet.has('febre') && symptomSet.has('tosse')) {
@@ -30,7 +36,9 @@ function getDiagnosis() {
         diagnosis = "Pode ser um sinal de estresse ou fadiga.";
     }
 
-    document.getElementById('result').innerText = diagnosis;
-    document.getElementById('result').style.opacity = 1;
-    document.getElementById('result').style.transform = 'translateY(0)';
+    // Atualiza o texto do resultado e faz com que ele seja visível
+    const resultElement = document.getElementById('result');
+    resultElement.innerText = diagnosis;
+    resultElement.style.opacity = 1;
+    resultElement.style.transform = 'translateY(0)';
 }
