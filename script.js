@@ -1,3 +1,6 @@
+### *script.js*
+
+javascript
 function getDiagnosis() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
     const selectedSymptoms = Array.from(checkboxes).map(cb => cb.value);
@@ -8,12 +11,12 @@ function getDiagnosis() {
     if (selectedSymptoms.length > 0) {
         const symptomsSet = new Set(selectedSymptoms);
 
-        // Exemplo de combinação de 6 sintomas
+        // Diagnóstico para combinação de 6 sintomas
         if (symptomsSet.has('febre') && symptomsSet.has('tosse') && symptomsSet.has('dor de cabeça') && symptomsSet.has('náusea') && symptomsSet.has('cansaço') && symptomsSet.has('dificuldade respiratória')) {
             diagnosis = "Possível COVID-19 grave. Procure ajuda médica imediatamente.";
             severityClass = "grave";
         } 
-        // Exemplo de combinações de 5 sintomas
+        // Diagnósticos para combinações de 5 sintomas
         else if (symptomsSet.has('febre') && symptomsSet.has('tosse') && symptomsSet.has('dor de cabeça') && symptomsSet.has('náusea') && symptomsSet.has('cansaço')) {
             diagnosis = "Possível gripe severa. Procure um médico.";
             severityClass = "moderado";
@@ -21,7 +24,7 @@ function getDiagnosis() {
             diagnosis = "Possível COVID-19 leve. Monitore seus sintomas.";
             severityClass = "moderado";
         }
-        // Exemplo de combinações de 4 sintomas
+        // Diagnósticos para combinações de 4 sintomas
         else if (symptomsSet.has('febre') && symptomsSet.has('tosse') && symptomsSet.has('dor de cabeça') && symptomsSet.has('náusea')) {
             diagnosis = "Possível gripe moderada. Repouse e hidrate-se.";
             severityClass = "moderado";
@@ -29,23 +32,29 @@ function getDiagnosis() {
             diagnosis = "Possível gripe severa. Repouse e consulte um médico.";
             severityClass = "moderado";
         }
-        // Exemplo de combinações de 3 sintomas
+        // Diagnósticos para combinações de 3 sintomas
         else if (symptomsSet.has('febre') && symptomsSet.has('tosse') && symptomsSet.has('dor de cabeça')) {
             diagnosis = "Possível resfriado forte. Repouse e tome líquidos.";
             severityClass = "moderado";
         } else if (symptomsSet.has('febre') && symptomsSet.has('tosse') && symptomsSet.has('cansaço')) {
             diagnosis = "Possível gripe leve. Repouse.";
             severityClass = "leve";
+        } else if (symptomsSet.has('febre') && symptomsSet.has('tosse') && symptomsSet.has('náusea')) {
+            diagnosis = "Possível virose. Repouse, hidrate-se, e monitore seus sintomas.";
+            severityClass = "moderado";
         }
-        // Exemplo de combinações de 2 sintomas
+        // Diagnósticos para combinações de 2 sintomas
         else if (symptomsSet.has('febre') && symptomsSet.has('tosse')) {
             diagnosis = "Possível resfriado ou início de gripe. Descanse e mantenha-se hidratado.";
             severityClass = "leve";
         } else if (symptomsSet.has('tosse') && symptomsSet.has('dor de cabeça')) {
             diagnosis = "Possível resfriado. Repouse e mantenha-se hidratado.";
             severityClass = "leve";
+        } else if (symptomsSet.has('febre') && symptomsSet.has('cansaço')) {
+            diagnosis = "Possível cansaço por desidratação. Beba líquidos e descanse.";
+            severityClass = "leve";
         }
-        // Exemplo de combinações de 1 sintoma
+        // Diagnósticos para sintomas individuais
         else if (symptomsSet.has('febre')) {
             diagnosis = "Possível febre leve. Monitore seus sintomas.";
             severityClass = "leve";
