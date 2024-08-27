@@ -1,5 +1,3 @@
-### *script.js*
-
 javascript
 function getDiagnosis() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
