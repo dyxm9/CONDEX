@@ -9,37 +9,30 @@
 <body>
     <div class="container">
         <h1>Diagnóstico de Sintomas</h1>
-        <p>Selecione os sintomas abaixo e receba um diagnóstico:</p>
-        <div class="symptoms-container">
-            <div class="symptom-group">
-                <input type="checkbox" id="febre" value="febre">
-                <label for="febre">Febre</label>
-            </div>
-            <div class="symptom-group">
-                <input type="checkbox" id="tosse" value="tosse">
-                <label for="tosse">Tosse</label>
-            </div>
-            <div class="symptom-group">
-                <input type="checkbox" id="dor-cabeca" value="dor de cabeça">
-                <label for="dor-cabeca">Dor de Cabeça</label>
-            </div>
-            <div class="symptom-group">
-                <input type="checkbox" id="nausea" value="náusea">
-                <label for="nausea">Náusea</label>
-            </div>
-            <div class="symptom-group">
-                <input type="checkbox" id="cansaco" value="cansaço">
-                <label for="cansaco">Cansaço</label>
-            </div>
-            <div class="symptom-group">
-                <input type="checkbox" id="dificuldade-respiratoria" value="dificuldade respiratória">
-                <label for="dificuldade-respiratoria">Dificuldade Respiratória</label>
-            </div>
+        <p>Selecione seus sintomas:</p>
+
+        <div class="symptom-group">
+            <label><input type="checkbox" value="febre"> Febre</label>
+            <label><input type="checkbox" value="tosse"> Tosse</label>
+            <label><input type="checkbox" value="dor de cabeça"> Dor de cabeça</label>
+            <label><input type="checkbox" value="náusea"> Náusea</label>
+            <label><input type="checkbox" value="cansaço"> Cansaço</label>
+            <label><input type="checkbox" value="dificuldade respiratória"> Dificuldade respiratória</label>
         </div>
+
         <button onclick="getDiagnosis()">Obter Diagnóstico</button>
-        <p id="result"></p>
-        <p class="footer">Desenvolvido por Miguel</p>
+
+        <div id="medical-record">
+            <h2>Prontuário Médico</h2>
+            <p><strong>Nome:</strong> João Miguel</p>
+            <p id="result"><strong>Diagnóstico:</strong> </p>
+            <p id="medications"><strong>Medicações Prescritas:</strong> </p>
+            <p id="medical-leave"><strong>Dias de atestado:</strong> </p>
+        </div>
+
+        <p id="developer">Desenvolvido por Miguel</p>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
