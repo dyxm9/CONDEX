@@ -1,77 +1,44 @@
 body {
-    background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 50px;
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #0056b3;
-}
-
-.symptom-group {
-    margin-bottom: 20px;
-    display: inline-block;
-    text-align: left;
-}
-
-.symptom-group label {
-    margin-right: 10px;
+label {
     display: block;
-    font-size: 14px;
-    color: #0056b3;
+    margin: 10px;
 }
 
 button {
-    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #0056b3;
 }
 
-#medical-record {
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 30px;
+.clipboard {
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#diagnostic-info {
     text-align: left;
-    font-family: 'Courier New', Courier, monospace;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-#medical-record h2 {
-    color: #0056b3;
-    margin-bottom: 10px;
-}
-
-#result, #medications, #medical-leave {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-#developer {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #333;
 }
