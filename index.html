@@ -3,36 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnóstico de Sintomas</title>
+    <title>Seleção de Sintomas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Diagnóstico de Sintomas</h1>
-        <p>Selecione seus sintomas:</p>
-
-        <div class="symptom-group">
-            <label><input type="checkbox" value="febre"> Febre</label>
-            <label><input type="checkbox" value="tosse"> Tosse</label>
-            <label><input type="checkbox" value="dor de cabeça"> Dor de cabeça</label>
-            <label><input type="checkbox" value="náusea"> Náusea</label>
-            <label><input type="checkbox" value="cansaço"> Cansaço</label>
-            <label><input type="checkbox" value="dificuldade respiratória"> Dificuldade respiratória</label>
-        </div>
-
-        <button onclick="getDiagnosis()">Obter Diagnóstico</button>
-
-        <div id="medical-record">
-            <h2>Prontuário Médico</h2>
-            <p><strong>Nome:</strong> João Miguel</p>
-            <p id="result"><strong>Diagnóstico:</strong> </p>
-            <p id="medications"><strong>Medicações Prescritas:</strong> </p>
-            <p id="medical-leave"><strong>Dias de atestado:</strong> </p>
-        </div>
-
-        <p id="developer">Desenvolvido por Miguel</p>
+        <h1>Selecione seus sintomas</h1>
+        <form id="symptomForm">
+            <label><input type="checkbox" name="symptoms" value="febre"> Febre</label>
+            <label><input type="checkbox" name="symptoms" value="dor de cabeça"> Dor de Cabeça</label>
+            <label><input type="checkbox" name="symptoms" value="tosse"> Tosse</label>
+            <label><input type="checkbox" name="symptoms" value="náusea"> Náusea</label>
+            <label><input type="checkbox" name="symptoms" value="cansaço"> Cansaço</label>
+            <label><input type="checkbox" name="symptoms" value="dor no corpo"> Dor no Corpo</label>
+            <button type="submit">Obter Diagnóstico</button>
+        </form>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
