@@ -1,44 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+function getDiagnosis() {
+    const symptoms = document.getElementById('symptoms').value;
+    let diagnosis = "Não foi possível identificar os sintomas. Por favor, consulte um médico.";
 
-.container {
-    text-align: center;
-    margin-top: 50px;
-}
+    if (symptoms.includes('febre') && symptoms.includes('tosse')) {
+        diagnosis = "Pode ser gripe ou COVID-19. Procure um médico.";
+    } else if (symptoms.includes('dor de cabeça') && symptoms.includes('náusea')) {
+        diagnosis = "Pode ser uma enxaqueca. Procure um médico.";
+    }
 
-label {
-    display: block;
-    margin: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.clipboard {
-    margin: 50px auto;
-    padding: 20px;
-    width: 80%;
-    background-color: white;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#diagnostic-info {
-    text-align: left;
+    document.getElementById('result').innerText = diagnosis;
 }
