@@ -8,10 +8,23 @@
 </head>
 <body>
     <h1>Diagnóstico de Sintomas</h1>
-    <p>Digite seus sintomas abaixo e receba um diagnóstico:</p>
-    <textarea id="symptoms" rows="5" cols="40" placeholder="Descreva seus sintomas aqui..."></textarea><br>
+    <p>Selecione seus sintomas:</p>
+
+    <div class="symptom-group">
+        <label><input type="checkbox" value="febre"> Febre</label>
+        <label><input type="checkbox" value="tosse"> Tosse</label>
+        <label><input type="checkbox" value="dor de cabeça"> Dor de cabeça</label>
+        <label><input type="checkbox" value="náusea"> Náusea</label>
+        <label><input type="checkbox" value="cansaço"> Cansaço</label>
+        <label><input type="checkbox" value="dificuldade respiratória"> Dificuldade respiratória</label>
+    </div>
+
     <button onclick="getDiagnosis()">Obter Diagnóstico</button>
+
     <p id="result"></p>
+
+    <p id="developer">Desenvolvido por Miguel</p>
+
     <script src="script.js"></script>
 </body>
 </html>
