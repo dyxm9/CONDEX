@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção de Sintomas</title>
+    <title>Diagnóstico de Sintomas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Selecione seus sintomas</h1>
-        <form id="symptomForm">
-            <label><input type="checkbox" name="symptoms" value="febre"> Febre</label>
-            <label><input type="checkbox" name="symptoms" value="dor de cabeça"> Dor de Cabeça</label>
-            <label><input type="checkbox" name="symptoms" value="tosse"> Tosse</label>
-            <label><input type="checkbox" name="symptoms" value="náusea"> Náusea</label>
-            <label><input type="checkbox" name="symptoms" value="cansaço"> Cansaço</label>
-            <label><input type="checkbox" name="symptoms" value="dor no corpo"> Dor no Corpo</label>
-            <button type="submit">Obter Diagnóstico</button>
-        </form>
-    </div>
+    <h1>Diagnóstico de Sintomas</h1>
+    <p>Digite seus sintomas abaixo e receba um diagnóstico:</p>
+    <textarea id="symptoms" rows="5" cols="40" placeholder="Descreva seus sintomas aqui..."></textarea><br>
+    <button onclick="getDiagnosis()">Obter Diagnóstico</button>
+    <p id="result"></p>
     <script src="script.js"></script>
 </body>
 </html>
