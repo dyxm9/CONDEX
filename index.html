@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnóstico de Sintomas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Shooting Game</title>
+    <style>
+        canvas {
+            background-color: black;
+            display: block;
+            margin: 0 auto;
+        }
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>Diagnóstico de Sintomas</h1>
-    <p>Selecione seus sintomas:</p>
-
-    <div class="symptom-group">
-        <label><input type="checkbox" value="febre"> Febre</label>
-        <label><input type="checkbox" value="tosse"> Tosse</label>
-        <label><input type="checkbox" value="dor de cabeça"> Dor de cabeça</label>
-        <label><input type="checkbox" value="náusea"> Náusea</label>
-        <label><input type="checkbox" value="cansaço"> Cansaço</label>
-        <label><input type="checkbox" value="dificuldade respiratória"> Dificuldade respiratória</label>
-    </div>
-
-    <button onclick="getDiagnosis()">Obter Diagnóstico</button>
-
-    <p id="result"></p>
-
-    <p id="developer">Desenvolvido por Miguel</p>
-
+    <h1>Shooting Game</h1>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
     <script src="script.js"></script>
 </body>
 </html>
