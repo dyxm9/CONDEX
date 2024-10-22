@@ -49,6 +49,19 @@
             background: #005b99; /* Azul mais escuro */
             border-radius: 4px;
         }
+        .button {
+            display: inline-block;
+            background-color: #00ccff; /* Azul claro */
+            color: #000000; /* Texto preto */
+            padding: 10px 20px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            cursor: pointer; /* Adicionado para indicar que é clicável */
+        }
         footer {
             text-align: center;
             padding: 10px;
@@ -69,12 +82,21 @@
             }
         }
     </style>
+    <script>
+        function showAcknowledgments() {
+            // Esconde todas as seções
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Mostra a seção de agradecimentos
+            document.getElementById('agradecimentos').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Garra Robótica Hidráulica</h1>
-        </nav>
-    </header>
+        <nav>
 
     <section id="introducao">
         <h2>Introdução</h2>
