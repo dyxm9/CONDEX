@@ -53,6 +53,14 @@
             font-size: 1.2em;
             cursor: pointer; /* Indica que é clicável */
         }
+        iframe {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+        }
         footer {
             text-align: center;
             padding: 10px;
@@ -71,13 +79,8 @@
         }
     </style>
     <script>
-        function showAcknowledgments() {
-            // Esconde todas as seções
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => section.style.display = 'none');
-
-            // Mostra a seção de agradecimentos
-            document.getElementById('agradecimentos').style.display = 'block';
+        function goToYouTube() {
+            window.open("https://youtu.be/6JhzFCaVkwY?si=GYsg2aOn0s1JQ9bG", "_blank");
         }
     </script>
 </head>
@@ -134,14 +137,13 @@
     </section>
 
     <section>
-        <h2>Veja Nossos Agradecimentos!</h2>
-        <button class="button" onclick="showAcknowledgments();">Agradecimentos</button>
+        <h2>Vídeo de Referência</h2>
+        <iframe src="https://www.youtube.com/embed/6JhzFCaVkwY" allowfullscreen></iframe>
     </section>
 
-    <section id="agradecimentos" style="display: none;">
-        <h2>Agradecimentos</h2>
-        <p>Agradecemos a todos que contribuíram para a realização deste projeto, incluindo nossos professores, colegas e familiares. Sua ajuda foi fundamental para o sucesso da nossa garra robótica hidráulica!</p>
-        <p>Esperamos que este projeto inspire outros a explorar a tecnologia hidráulica e suas aplicações práticas.</p>
+    <section>
+        <h2>Veja Nossos Agradecimentos!</h2>
+        <button class="button" onclick="goToYouTube();">Agradecimentos</button>
     </section>
 
     <footer>
