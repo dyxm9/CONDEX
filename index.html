@@ -3,36 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Construa seu Robô</title>
+  <title>Construa seu Robô Assistente Social</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Construa seu Robô Assistente</h1>
-    <p>Selecione os componentes e crie seu robô virtual!</p>
+  <header>
+    <h1>Construa Seu Robô Assistente Social</h1>
+    <p>Personalize um robô para auxiliar idosos, pessoas com deficiência ou para situações de emergência.</p>
+  </header>
 
-    <div class="component-section">
-      <h2>Escolha a Cabeça do Robô:</h2>
-      <select id="head-select">
-        <option value="camera">Câmera com sensores</option>
-        <option value="microfone">Microfone para comandos de voz</option>
-        <option value="sensor">Sensores térmicos</option>
-      </select>
-    </div>
+  <main>
+    <section class="robot-construction">
+      <h2>Escolha os Componentes do Seu Robô Assistente:</h2>
 
-    <div class="component-section">
-      <h2>Escolha o Corpo do Robô:</h2>
-      <select id="body-select">
-        <option value="movel">Corpo móvel com rodas</option>
-        <option value="fixo">Corpo fixo</option>
-        <option value="braços">Corpo com braços articulados</option>
-      </select>
-    </div>
+      <!-- Seção da Cabeça -->
+      <div class="component-section">
+        <h3>Cabeça do Robô:</h3>
+        <div class="options">
+          <label>
+            <input type="radio" name="head" value="camera" checked>
+            <img src="camera_head.jpg" alt="Cabeça com câmera e sensores">
+            <p>Câmera e Sensores para Monitoramento</p>
+          </label>
+          <label>
+            <input type="radio" name="head" value="microfone">
+            <img src="microfone_head.jpg" alt="Cabeça com microfone">
+            <p>Microfone para Reconhecimento de Voz</p>
+          </label>
+          <label>
+            <input type="radio" name="head" value="sensor">
+            <img src="sensor_head.jpg" alt="Cabeça com sensor térmico">
+            <p>Sensores Térmicos e de Batimentos Cardíacos</p>
+          </label>
+        </div>
+      </div>
 
-    <button id="build-button">Montar Robô</button>
+      <!-- Seção do Corpo -->
+      <div class="component-section">
+        <h3>Corpo do Robô:</h3>
+        <div class="options">
+          <label>
+            <input type="radio" name="body" value="movel" checked>
+            <img src="movel_body.jpg" alt="Corpo móvel com rodas">
+            <p>Corpo Móvel para Navegação em Terrenos Difíceis</p>
+          </label>
+          <label>
+            <input type="radio" name="body" value="fixo">
+            <img src="fixo_body.jpg" alt="Corpo fixo">
+            <p>Corpo Fixo para Assistência Estável em Casa</p>
+          </label>
+          <label>
+            <input type="radio" name="body" value="bracos">
+            <img src="bracos_body.jpg" alt="Corpo com braços articulados">
+            <p>Braços Articulados para Manipulação de Objetos</p>
+          </label>
+        </div>
+      </div>
 
-    <div id="robot-display"></div>
-  </div>
+      <!-- Seção de Energia -->
+      <div class="component-section">
+        <h3>Sistema de Energia:</h3>
+        <div class="options">
+          <label>
+            <input type="radio" name="energy" value="solar" checked>
+            <img src="solar_energy.jpg" alt="Energia solar">
+            <p>Energia Solar para Sustentabilidade</p>
+          </label>
+          <label>
+            <input type="radio" name="energy" value="bateria">
+            <img src="battery_energy.jpg" alt="Bateria de alta duração">
+            <p>Bateria de Alta Duração para Longas Operações</p>
+          </label>
+          <label>
+            <input type="radio" name="energy" value="combustivel">
+            <img src="fuel_energy.jpg" alt="Energia à base de combustível">
+            <p>Sistema de Combustível para Emergências</p>
+          </label>
+        </div>
+      </div>
+
+      <!-- Botão para Construir Robô -->
+      <button id="build-button">Montar Robô</button>
+    </section>
+
+    <section id="robot-display">
+      <h2>Seu Robô Assistente</h2>
+      <div id="robot-image"></div>
+      <p id="robot-description"></p>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
