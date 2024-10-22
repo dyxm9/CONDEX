@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Platformer Game</title>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        canvas {
-            display: block;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construa seu Robô</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="main.js"></script>
+  <div class="container">
+    <h1>Construa seu Robô Assistente</h1>
+    <p>Selecione os componentes e crie seu robô virtual!</p>
+
+    <div class="component-section">
+      <h2>Escolha a Cabeça do Robô:</h2>
+      <select id="head-select">
+        <option value="camera">Câmera com sensores</option>
+        <option value="microfone">Microfone para comandos de voz</option>
+        <option value="sensor">Sensores térmicos</option>
+      </select>
+    </div>
+
+    <div class="component-section">
+      <h2>Escolha o Corpo do Robô:</h2>
+      <select id="body-select">
+        <option value="movel">Corpo móvel com rodas</option>
+        <option value="fixo">Corpo fixo</option>
+        <option value="braços">Corpo com braços articulados</option>
+      </select>
+    </div>
+
+    <button id="build-button">Montar Robô</button>
+
+    <div id="robot-display"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
