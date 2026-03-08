@@ -1,74 +1,20 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f8ff;
-  color: #333;
+.card{
+background:#0f172a;
+padding:25px;
+border-radius:12px;
+border:1px solid #1e293b;
+transition:0.3s;
 }
 
-header {
-  background-color: #1e90ff;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.card:hover{
+transform:translateY(-5px);
+border-color:#22c55e;
 }
 
-h1 {
-  margin: 0;
-  font-size: 36px;
-}
-
-p {
-  margin: 0;
-  font-size: 18px;
-}
-
-main {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-h2 {
-  font-size: 28px;
-  color: #1e90ff;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  
-  section#importancia {
-  background-color: #e6f7ff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-section#importancia h2 {
-  color: #007acc;
-}
+.impact-card{
+background:#0f172a;
+padding:30px;
+border-radius:12px;
+text-align:center;
+border:1px solid #1e293b;
 }
